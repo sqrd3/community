@@ -68,7 +68,7 @@ ul{
 }
 .header{
     height: 60px;
-    background: url(../images/topbg.png);
+    /* background: url(../images/topbg.png); */
     background-size: 100% 100%;
     overflow: hidden;
     position: relative;
