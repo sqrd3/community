@@ -1,0 +1,76 @@
+<template>
+  <div>
+    <div class="box">
+        <ul class="all">
+            <li v-for="(item,index) in list" :key="index" @click="go(item.path)" :title="item.message">
+                <span class="tit">{{ item.message }}</span>
+                <span class="time">{{ item.time }}</span>
+            </li>
+        </ul>
+    </div >
+  </div>
+</template>
+
+<script>
+export default {
+    props:{
+        list:{
+            type:Array,
+            default:[]
+        }
+    },
+    methods:{
+        go(path){
+            this.$router.push(path);
+        }
+    }
+}
+</script>
+
+<style scoped>
+.all{
+    font-size: 13px;
+    color:#333333;
+    padding-top:10px;
+}
+.all li{
+    width:80%;
+    margin:0 auto;
+    height:48px;
+    line-height:48px;
+    display: flex;
+    position: relative;
+    padding: 0 5px 0 15px;
+    cursor: pointer;
+}
+.all li:hover{
+    font-weight: bold;
+    color:#0c57b0;
+}
+.all li::before{
+    width:5px;
+    height:5px;
+    /* display: inline-block; */
+    position: absolute;
+    /* z-index: 999; */
+    left: 0;
+    top:50%;
+    content:"";
+    background-color: #0c57b0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.tit{
+    width:90%;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+.time{
+    font-size: 14px;
+}
+</style>
