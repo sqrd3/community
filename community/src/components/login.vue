@@ -11,8 +11,9 @@
     <div class="content">
         <div class="login-left"></div>
         <div class="auth-left">
+          
             <img src="../assets/image/timg2.jpg" alt="" class="image">
-            <div class="remark">
+            <!-- <div class="remark">
                 <h3 class="justify">统一身份认证</h3>
                 <ul class="mention">
                     <li>◆ 首次完成身份认证后，务必在个人中心修改初始密码，绑定邮箱和手机号</li>
@@ -21,9 +22,10 @@
                     <li>◆ 在办理完统一身份认证相关业务后，请点击右上角的安全退出按钮</li>
                 </ul>
                 <p class="aqts">　　　安全提示：为了您的安全，请不定期修改密码</p>
-            </div>
+            </div> -->
         </div>
         <div class="login-right">
+               <h3 class="justify">统一身份认证</h3>
             <div class="logodz">
                 <img src="../assets/image/logo.png" alt="">
             </div>
@@ -270,12 +272,14 @@ ul{
 }
 .justify{
     font-size: 22px;
-    color: #FFFFFF;
+    color:#000000;
     letter-spacing: 0;
     font-weight: 600;
     padding-left: 10px;
     border-left: 4px solid #00A185;
-    margin: 0 0 40px;
+    /* margin: 0 0 40px; */
+    margin-left: 20px;
+    margin-top: 20px;
 }
 .mention{
     list-style: none;
